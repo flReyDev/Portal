@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Post } from './models/Post';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+<<<<<<< HEAD
   title = 'Probando Angular';
+=======
+  title = 'Portal';
+  //injección de dependencias
+  http = inject(HttpClient);
+  Posts: Array<Post> = [];
+
+  ShowAlert() {
+    alert('Hello World');
+  }
+
+  ngOnInit() {
+    this.http.get<Post>('https://jsonplaceholder.typicode.com/posts')
+    .subscribe((data) => {
+        this.Posts.push(data);
+      }
+    );
+  }
+>>>>>>> Dev
 }
