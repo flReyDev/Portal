@@ -1,0 +1,9 @@
+<ng-container *ngIf="posts">
+    <p>{{ posts.id }}</p>
+    <p><b>{{ posts.userid }}</b></p>
+    <p><i>{{ posts.title }}</i></p>
+    <p>{{ posts.body }}</p>
+</ng-container>
+<ng-container *ngIf="!posts">
+    No hay contenido que mostra
+</ng-container>
