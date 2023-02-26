@@ -8,9 +8,6 @@ import { Post } from './models/Post';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-<<<<<<< HEAD
-  title = 'Probando Angular';
-=======
   title = 'Portal';
   //injección de dependencias
   http = inject(HttpClient);
@@ -27,5 +24,4 @@ export class AppComponent {
       }
     );
   }
->>>>>>> Dev
 }
